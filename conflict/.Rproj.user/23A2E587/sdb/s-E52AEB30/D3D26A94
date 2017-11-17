@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1510941938132.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "D3D26A94",
+    "lastKnownWriteTime" : 4465960960,
+    "last_content_update" : 1510941938132,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "52071206",
+        "caption" : "q1.2012",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=q1.2012&cache_key=52071206",
+        "displayedObservations" : "28076",
+        "environment" : "",
+        "object" : "q1.2012",
+        "preview" : "0",
+        "totalObservations" : "28076",
+        "variables" : "164"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
