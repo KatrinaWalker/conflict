@@ -117,7 +117,7 @@ res = residuals(model, type="deviance") # residuals
 
 # dummy vars used in HMs models: anyviolence recoverystartquarter recoverystartphase recoveryphase longrecoveryphase
 # thetas: ste_theta0-ste_theta8 and roll_theta0-roll_theta8
-hm.df = select(q1.2012, ste_theta0, ste_theta8, roll_theta8, roll_theta0, anyviolence, recoverystartquarter, recoverystartphase, recoveryphase, longrecoveryphase)
+hm.df = select(q1.2012, year, quarter, isocode,ons_armedconf_best, ste_theta0, ste_theta8, roll_theta8, roll_theta0, anyviolence, recoverystartquarter, recoverystartphase, recoveryphase, longrecoveryphase)
 
 # how R is treating NA in hm df 
 play = na.omit(hm.df) # becomes 16903 x 9 dataframe (60% of original df)
