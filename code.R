@@ -31,6 +31,7 @@ names(q1.2012)
 # how R is treating NA 
 play = na.omit(q1.2012) # becomes 5612 x 161 dataframe (20% of original df)
 
+
 # check na total in columns
 na.count.col = as.data.frame(sapply(q1.2012, function(x) sum(is.na(x)))) # column
 na.count.col$per = na.count.col$`sapply(q1.2012, function(x) sum(is.na(x)))` / 28076
@@ -113,4 +114,16 @@ confint(model)
 predict(model, type="response", newdata = test) # define treshold using a confusian matrix
 
 res = residuals(model, type="deviance") # residuals
+
+# dummy vars used in HMs models: anyviolence recoverystartquarter recoverystartphase recoveryphase longrecoveryphase
+# thetas: ste_theta0-ste_theta8 and roll_theta0-roll_theta8
+hm.df = select(q1.2012, ste_theta0, ste_theta8, roll_theta8, roll_theta0, anyviolence, recoverystartquarter, recoverystartphase, recoveryphase, longrecoveryphase)
+
+# how R is treating NA in hm df 
+play = na.omit(hm.df) # becomes 16903 x 9 dataframe (60% of original df)
+
+na.count.col = as.data.frame(sapply(hm.df, function(x) sum(is.na(x)))) # column
+na.count.col$per = na.count.col$`sapply(hm.df, function(x) sum(is.na(x)))` / 28076
+
+
 
